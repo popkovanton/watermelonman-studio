@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Watermelon Man Studio</title>
+  <rect width="64" height="64" rx="16" fill="#171918"/>
+  <path d="M17 18h9l6 23 6-23h9L37 48H27L17 18Z" fill="#f8f7f3"/>
+  <path d="M42 18h5L37 48h-5l10-30Z" fill="#e94f57"/>
+  <circle cx="48" cy="47" r="4" fill="#1f6b4f"/>
+</svg>
