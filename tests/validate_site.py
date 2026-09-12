@@ -118,6 +118,7 @@ def validate_wrangler() -> None:
 def main() -> int:
     try:
         require(not (PUBLIC / "framecut/index.html").exists(), "Private FrameCut page must not be published")
+        require("Belgrade · Serbia" not in (PUBLIC / "index.html").read_text(encoding="utf-8"), "Homepage must not publish the studio location")
         for route, path in ROUTES.items():
             validate_page(route, path)
         validate_wrangler()
