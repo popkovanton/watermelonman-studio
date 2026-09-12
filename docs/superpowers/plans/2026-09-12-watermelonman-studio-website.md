@@ -162,6 +162,6 @@ Run: `git diff -- . ':(exclude)docs/superpowers/specs/2026-09-12-watermelonman-s
 
 Confirm only intended website, validation, documentation, and repository-guidance changes are present.
 
-- [ ] **Step 4: Commit and push**
+- [x] **Step 4: Commit and push**
 
 Stage all intended files and commit with `feat: launch studio website`. Push the resulting `main` commit to `origin/main`, then verify local `HEAD` matches `refs/remotes/origin/main`.
