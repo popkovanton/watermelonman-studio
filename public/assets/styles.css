@@ -50,12 +50,6 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-img,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 .skip-link {
   position: fixed;
   z-index: 10;
@@ -106,8 +100,7 @@ svg {
 }
 
 .site-nav ul,
-.footer-nav,
-.feature-list {
+.footer-nav {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -158,14 +151,12 @@ svg {
 
 h1,
 h2,
-h3,
 p {
   margin-top: 0;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   line-height: 1.04;
   text-wrap: balance;
 }
@@ -181,11 +172,6 @@ h1 {
 h2 {
   font-size: clamp(2rem, 5vw, 4.2rem);
   letter-spacing: -0.055em;
-}
-
-h3 {
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
 }
 
 .lead {
@@ -256,135 +242,6 @@ h3 {
   max-width: 570px;
   color: var(--muted);
   font-size: 1.12rem;
-}
-
-.text-link {
-  display: inline-flex;
-  gap: 0.65rem;
-  align-items: center;
-  margin-top: 1.4rem;
-  color: var(--ink);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.text-link::after {
-  content: "→";
-  color: var(--melon);
-  font-size: 1.25em;
-}
-
-.page-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.42fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  align-items: center;
-  padding: clamp(5rem, 10vw, 8rem) 0;
-}
-
-.page-intro h1 {
-  font-size: clamp(3.5rem, 8vw, 7rem);
-}
-
-.framecut-mark {
-  width: min(100%, 360px);
-  margin-inline: auto;
-  filter: drop-shadow(0 24px 30px rgb(23 25 24 / 10%));
-}
-
-.feature-section {
-  display: grid;
-  grid-template-columns: minmax(13rem, 0.45fr) minmax(0, 1fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  padding: clamp(4.5rem, 9vw, 7rem) 0;
-  border-block: 1px solid var(--line);
-}
-
-.feature-list li {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  gap: 0.75rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--line);
-  font-size: clamp(1.15rem, 2.3vw, 1.45rem);
-}
-
-.feature-number {
-  color: var(--melon);
-  font-size: 0.78rem;
-  font-weight: 760;
-  letter-spacing: 0.08em;
-}
-
-.preview-section {
-  padding: clamp(5rem, 10vw, 8rem) 0;
-}
-
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 3vw, 2rem);
-}
-
-.screen-placeholder {
-  display: grid;
-  aspect-ratio: 9 / 18;
-  place-items: center;
-  padding: 1.5rem;
-  overflow: hidden;
-  color: var(--muted);
-  background:
-    linear-gradient(var(--surface), var(--surface)) padding-box,
-    linear-gradient(145deg, var(--line), var(--melon)) border-box;
-  border: 1px solid transparent;
-  border-radius: 1.5rem;
-  text-align: center;
-}
-
-.screen-placeholder:nth-child(2) {
-  transform: translateY(2.5rem);
-}
-
-.screen-placeholder span {
-  max-width: 9rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.store-callout {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: clamp(6rem, 12vw, 10rem);
-  padding: 2rem 0;
-  border-top: 3px solid var(--ink);
-  border-bottom: 1px solid var(--line);
-}
-
-.store-callout p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.store-badge-placeholder {
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 0.7rem;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  color: var(--surface);
-  background: var(--ink);
-  border-radius: 0.45rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.store-badge-placeholder::before {
-  content: "▶";
-  font-size: 1.25rem;
 }
 
 .simple-page {
@@ -508,8 +365,6 @@ h3 {
   }
 
   .hero,
-  .page-intro,
-  .feature-section,
   .policy-layout {
     grid-template-columns: 1fr;
   }
@@ -531,23 +386,10 @@ h3 {
     font-size: 4rem;
   }
 
-  .page-intro {
-    align-items: start;
-  }
-
-  .framecut-mark {
-    width: min(70vw, 300px);
-  }
-
-  .feature-section {
-    gap: 1rem;
-  }
-
   .policy-meta {
     position: static;
   }
 
-  .store-callout,
   .site-footer {
     align-items: flex-start;
   }
@@ -574,27 +416,6 @@ h3 {
 
   .product-index {
     font-size: 3.5rem;
-  }
-
-  .preview-grid {
-    gap: 0.65rem;
-  }
-
-  .screen-placeholder {
-    padding: 0.75rem;
-    border-radius: 0.8rem;
-  }
-
-  .screen-placeholder span {
-    font-size: 0.65rem;
-  }
-
-  .screen-placeholder:nth-child(2) {
-    transform: translateY(1.25rem);
-  }
-
-  .store-callout {
-    flex-direction: column;
   }
 
   .footer-nav {

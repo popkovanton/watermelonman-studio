@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Ship a polished, accessible, dependency-free four-route studio website through Cloudflare Workers static assets.
+**Goal:** Ship a polished, accessible, dependency-free studio website through Cloudflare Workers static assets.
 
-**Architecture:** Four semantic HTML documents under `public/` share one stylesheet and local SVG assets. A standard-library Python validator checks routes, metadata, links, assets, and Wrangler configuration without adding package tooling.
+**Architecture:** Three semantic HTML documents under `public/` share one stylesheet and a local SVG favicon. A standard-library Python validator checks routes, metadata, links, assets, and Wrangler configuration without adding package tooling.
 
 **Tech Stack:** HTML5, CSS, SVG, Python 3 standard library, Cloudflare Wrangler configuration
 
@@ -15,7 +15,7 @@
 - Website files live in `public/`; deployment is `npx wrangler deploy` with no build command.
 - Do not add JavaScript frameworks, CSS frameworks, package manifests, analytics, cookies, trackers, or external runtime assets.
 - Use only confirmed FrameCut features and privacy behavior from the approved specification.
-- Preserve clean routes `/`, `/framecut/`, `/privacy/`, and `/support/`.
+- Preserve clean routes `/`, `/privacy/`, and `/support/`; keep `/framecut/` unpublished until release.
 
 ---
 
@@ -33,7 +33,6 @@
 ```python
 ROUTES = {
     "/": Path("public/index.html"),
-    "/framecut/": Path("public/framecut/index.html"),
     "/privacy/": Path("public/privacy/index.html"),
     "/support/": Path("public/support/index.html"),
 }
@@ -55,15 +54,13 @@ Expected: non-zero exit with `Missing route /: public/index.html`.
 **Files:**
 - Create: `public/assets/styles.css`
 - Create: `public/assets/favicon.svg`
-- Create: `public/assets/framecut-icon.svg`
 - Create: `public/index.html`
-- Create: `public/framecut/index.html`
 - Create: `public/support/index.html`
 - Create: `public/privacy/index.html`
 
 **Interfaces:**
 - Consumes: the route and metadata contracts in `tests/validate_site.py`
-- Produces: four responsive static pages with shared navigation, footer, styles, and local assets
+- Produces: three responsive static pages with shared navigation, footer, styles, and local assets
 
 - [x] **Step 1: Create the shared CSS and SVG assets**
 
@@ -77,11 +74,11 @@ Expected: non-zero exit with `Missing route /: public/index.html`.
 }
 ```
 
-Build the typography, layout grid, skip link, focus states, editorial rules, product composition, screenshot placeholders, policy typography, and mobile breakpoints from these tokens. Keep body text at `1rem` or larger and support `prefers-reduced-motion` by avoiding required motion.
+Build the typography, layout grid, skip link, focus states, editorial rules, homepage product composition, policy typography, and mobile breakpoints from these tokens. Keep body text at `1rem` or larger and support `prefers-reduced-motion` by avoiding required motion.
 
-- [x] **Step 2: Author the homepage and FrameCut page**
+- [x] **Step 2: Author the homepage with a FrameCut product block**
 
-Use semantic `header`, `nav`, `main`, `section`, and `footer` elements. The homepage headline is “Small software, thoughtfully made.” with the approved studio description. The FrameCut headline is “Simple video editing. Without all the clutter.” and lists exactly the five approved capabilities. Mark replacement locations with source comments and show “Coming to Google Play” without a fake link.
+Use semantic `header`, `nav`, `main`, `section`, and `footer` elements. The homepage headline is “Small software, thoughtfully made.” with the approved studio description. Mention FrameCut as an Android video editor without publishing or linking a product route while the app is in development.
 
 - [x] **Step 3: Author support and privacy pages**
 
@@ -150,7 +147,7 @@ Expected: validator success and no whitespace errors.
 
 - [x] **Step 2: Serve and probe every route**
 
-Run the documented local server on port 8000. Request `/`, `/framecut/`, `/privacy/`, `/support/`, the stylesheet, and both SVG assets; require HTTP 200 for each. Leave the server running and provide `http://localhost:8000/` to the user.
+Run the documented local server on port 8000. Request `/`, `/privacy/`, `/support/`, the stylesheet, and favicon; require HTTP 200 for each. Leave the server running and provide `http://localhost:8000/` to the user.
 
 - [x] **Step 3: Inspect repository state and diff**
 

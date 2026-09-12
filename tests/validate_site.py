@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 ROUTES = {
     "/": PUBLIC / "index.html",
-    "/framecut/": PUBLIC / "framecut/index.html",
     "/privacy/": PUBLIC / "privacy/index.html",
     "/support/": PUBLIC / "support/index.html",
 }
@@ -118,6 +117,7 @@ def validate_wrangler() -> None:
 
 def main() -> int:
     try:
+        require(not (PUBLIC / "framecut/index.html").exists(), "Private FrameCut page must not be published")
         for route, path in ROUTES.items():
             validate_page(route, path)
         validate_wrangler()

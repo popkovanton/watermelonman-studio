@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
-  <title id="title">FrameCut placeholder app icon</title>
-  <desc id="description">A geometric frame and play symbol in coral, green, and charcoal.</desc>
-  <rect width="512" height="512" rx="116" fill="#fffef9"/>
-  <path d="M88 160V88h72M352 88h72v72M424 352v72h-72M160 424H88v-72" fill="none" stroke="#171918" stroke-linecap="square" stroke-width="34"/>
-  <path d="m221 185 115 71-115 71V185Z" fill="#e94f57"/>
-  <path d="M145 256h48" stroke="#1f6b4f" stroke-linecap="round" stroke-width="34"/>
-</svg>
