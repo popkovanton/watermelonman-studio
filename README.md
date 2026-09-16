@@ -1,6 +1,6 @@
 # Watermelon Man Studio
 
-The public website for Watermelon Man Studio and FrameCut. It is a dependency-free static site deployed as Cloudflare Workers static assets.
+The public website for Watermelon Man Studio and Fig: Video Editor. It is a dependency-free static site deployed as Cloudflare Workers static assets.
 
 ## Project structure
 
@@ -44,11 +44,11 @@ npx wrangler deploy
 
 Wrangler publishes the contents of `public/` using the Worker name `watermelonman-studio`.
 
-## FrameCut release
+## Fig release
 
-- FrameCut is currently mentioned only on the homepage; no public product route is deployed while the app is in development.
-- Add a product page and navigation link when FrameCut is ready to share publicly.
-- Review the developer-only comment near the top of `public/privacy/index.html` against the released app and update the public policy when needed.
+- Fig is currently mentioned only on the homepage; no public product route is deployed while the app is in development.
+- Add a product page, store link, and navigation link when Fig is ready to share publicly.
+- Reconcile the Privacy Policy and Google Play Data safety answers with the released app and current Google SDK disclosures before distribution.
 
 ## Add `app-ads.txt`
 
