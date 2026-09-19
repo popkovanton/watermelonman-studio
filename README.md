@@ -7,7 +7,8 @@ The public website for Watermelon Man Studio and Fig: Video Editor. It is a depe
 ```text
 public/
 ├── index.html                 Homepage
-├── privacy/index.html         Privacy Policy
+├── privacy/index.html         Privacy policy directory
+├── privacy/fig/index.html     Fig Privacy Policy
 ├── support/index.html         Support page
 └── assets/
     ├── styles.css             Shared styles
@@ -48,7 +49,8 @@ Wrangler publishes the contents of `public/` using the Worker name `watermelonma
 
 - Fig is currently mentioned only on the homepage; no public product route is deployed while the app is in development.
 - Add a product page, store link, and navigation link when Fig is ready to share publicly.
-- Reconcile the Privacy Policy and Google Play Data safety answers with the released app and current Google SDK disclosures before distribution.
+- Use `https://watermelonman.studio/privacy/fig/` in Fig and its Play Console listing.
+- Reconcile Fig's Privacy Policy and Google Play Data safety answers with the released app and current Google SDK disclosures before distribution.
 
 ## Add `app-ads.txt`
 
