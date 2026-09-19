@@ -52,12 +52,12 @@ Wrangler publishes the contents of `public/` using the Worker name `watermelonma
 - Use `https://watermelonman.studio/privacy/fig/` in Fig and its Play Console listing.
 - Reconcile Fig's Privacy Policy and Google Play Data safety answers with the released app and current Google SDK disclosures before distribution.
 
-## Add `app-ads.txt`
+## `app-ads.txt`
 
-When the AdMob publisher record is available, create `public/app-ads.txt` with the exact line supplied by Google. Cloudflare will serve it at:
+The AdMob publisher record is stored in `public/app-ads.txt`. Cloudflare serves it at:
 
 ```text
 https://watermelonman.studio/app-ads.txt
 ```
 
-Do not add a placeholder publisher ID.
+Keep this record synchronized with the publisher entry supplied by the AdMob account. Do not use an AdMob application ID or ad-unit ID.

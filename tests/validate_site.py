@@ -20,6 +20,7 @@ ROUTES = {
     "/support/": PUBLIC / "support/index.html",
 }
 SITE_URL = "https://watermelonman.studio"
+APP_ADS_ENTRY = "google.com, pub-7898844907449969, DIRECT, f08c47fec0942fa0"
 
 
 class PageParser(HTMLParser):
@@ -120,6 +121,9 @@ def main() -> int:
     try:
         require(not (PUBLIC / "framecut/index.html").exists(), "Private FrameCut page must not be published")
         require("Belgrade · Serbia" not in (PUBLIC / "index.html").read_text(encoding="utf-8"), "Homepage must not publish the studio location")
+        app_ads = PUBLIC / "app-ads.txt"
+        require(app_ads.is_file(), "Missing root app-ads.txt")
+        require(app_ads.read_text(encoding="utf-8").strip() == APP_ADS_ENTRY, "Incorrect app-ads.txt publisher entry")
         for route, path in ROUTES.items():
             validate_page(route, path)
         validate_wrangler()
