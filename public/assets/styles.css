@@ -228,6 +228,12 @@ h2 {
   letter-spacing: -0.08em;
 }
 
+.product-row + .product-row {
+  margin-top: clamp(3rem, 8vw, 6rem);
+  padding-top: clamp(3rem, 8vw, 6rem);
+  border-top: 1px solid var(--line);
+}
+
 .product-copy h2 {
   margin-bottom: 1.25rem;
 }
