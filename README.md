@@ -10,6 +10,7 @@ public/
 ├── privacy/index.html         Privacy policy directory
 ├── privacy/fig/index.html     Fig Privacy Policy
 ├── privacy/cars/index.html    Car Pixels Privacy Policy
+├── privacy/christmas/index.html Christmas Pixels Privacy Policy
 ├── support/index.html         Support page
 └── assets/
     ├── styles.css             Shared styles
@@ -48,7 +49,7 @@ Wrangler publishes the contents of `public/` using the Worker name `watermelonma
 
 ## Fig release
 
-- Fig is currently mentioned only on the homepage; no public product route is deployed while the app is in development.
+- Fig is listed on the homepage with a link to its Privacy Policy; no public product route is deployed while the app is in development.
 - Add a product page, store link, and navigation link when Fig is ready to share publicly.
 - Use `https://watermelonman.studio/privacy/fig/` in Fig and its Play Console listing.
 - Reconcile Fig's Privacy Policy and Google Play Data safety answers with the released app and current Google SDK disclosures before distribution.
@@ -73,3 +74,8 @@ https://watermelonman.studio/app-ads.txt
 ```
 
 Keep this record synchronized with the publisher entry supplied by the AdMob account. Do not use an AdMob application ID or ad-unit ID.
+
+## Christmas Pixels
+
+- Privacy Policy: `https://watermelonman.studio/privacy/christmas/`.
+- The policy is dated October 29, 2026 and is linked from the homepage and privacy directory.

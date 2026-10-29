@@ -18,6 +18,7 @@ ROUTES = {
     "/privacy/": PUBLIC / "privacy/index.html",
     "/privacy/fig/": PUBLIC / "privacy/fig/index.html",
     "/privacy/cars/": PUBLIC / "privacy/cars/index.html",
+    "/privacy/christmas/": PUBLIC / "privacy/christmas/index.html",
     "/support/": PUBLIC / "support/index.html",
 }
 SITE_URL = "https://watermelonman.studio"
